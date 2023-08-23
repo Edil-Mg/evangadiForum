@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './pages/home/Home'
 import Login from './pages/login/Login'
 import SignUp from './pages/signUp/SignUp'
+import Header from "./pages/header/Header";
+
 
 function App() {
 	const [userData, setUserData] = useContext(UserContext);
@@ -41,14 +43,35 @@ function App() {
 
 	return (
 		<Router>
-			
-				<Routes>
-					<Route path="/signup" element={<SignUp />} />
-					<Route path="/login" element={<Login />} />
+			<Routes>
+				<Route
+					path="/signup"
+					element={
+						<>
+							<Header />
+							<SignUp />
+						</>
+					}
+				/>
+				<Route
+					path="/login"
+					element={
+						<>
+							<Header />
+							<Login />
+						</>
+					}
+				/>
 
-					<Route path="/" element={<Home logout={logout} />} />
-				</Routes>
-			
+				<Route
+					path="/"
+					element={
+						<>
+							<Header /> <Home logout={logout} />{" "}
+						</>
+					}
+				/>
+			</Routes>
 		</Router>
 	);
 }
