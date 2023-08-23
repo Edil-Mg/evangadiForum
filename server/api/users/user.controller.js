@@ -121,7 +121,7 @@ module.exports = {
 					.json({ msg: "Incorrect Password! Please try again." });
 			}
 			const token = jwt.sign({ id: results.user_id }, process.env.JWT_SECRET, {
-				expiresIn: "1h",
+				expiresIn: "3h",
 			});
 			return res.json({
 				token,

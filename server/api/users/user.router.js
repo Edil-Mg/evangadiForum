@@ -12,6 +12,7 @@ router.get("/all", getUsers);
 router.get("/", auth, getUserById);
 router.post("/login", login);
 
+
 module.exports = router;
 
 // const router = require("express").Router();
