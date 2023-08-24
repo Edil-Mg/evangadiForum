@@ -1,12 +1,12 @@
 import { useContext, useEffect } from "react";
 import { UserContext } from "./context/UserContext";
+import './App.css'
 import axios from "axios";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './pages/home/Home'
 import Login from './pages/login/Login'
 import SignUp from './pages/signUp/SignUp'
-import Header from "./pages/header/Header";
-
+import NavBar from "./pages/navbar/NavBar";
 
 function App() {
 	const [userData, setUserData] = useContext(UserContext);
@@ -42,37 +42,39 @@ function App() {
 	}, []);
 
 	return (
-		<Router>
-			<Routes>
-				<Route
-					path="/signup"
-					element={
-						<>
-							<Header />
-							<SignUp />
-						</>
-					}
-				/>
-				<Route
-					path="/login"
-					element={
-						<>
-							<Header />
-							<Login />
-						</>
-					}
-				/>
+		<div className="app">
+			<Router>
+				<Routes>
+					<Route
+						path="/signup"
+						element={
+							<>
+								<NavBar />
+								<SignUp />
+							</>
+						}
+					/>
+					<Route
+						path="/login"
+						element={
+							<>
+								<NavBar />
+								<Login />
+							</>
+						}
+					/>
 
-				<Route
-					path="/"
-					element={
-						<>
-							<Header /> <Home logout={logout} />{" "}
-						</>
-					}
-				/>
-			</Routes>
-		</Router>
+					<Route
+						path="/"
+						element={
+							<>
+								<NavBar /> <Home logout={logout} />{" "}
+							</>
+						}
+					/>
+				</Routes>
+			</Router>
+		</div>
 	);
 }
 

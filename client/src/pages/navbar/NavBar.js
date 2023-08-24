@@ -1,11 +1,11 @@
 import React from 'react'
-import "./header.css"
+import "./navBar.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
 
 
-const Header = () => {
+const NavBar = () => {
   return (
 		<div className="nav_bar">
 			<div className="container">
@@ -22,7 +22,7 @@ const Header = () => {
 	);
 }
 
-export default Header
+export default NavBar
 
 
 

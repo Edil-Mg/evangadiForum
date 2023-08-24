@@ -1,11 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
+import "./login.css";
 import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../context/UserContext";
 import axios from "axios";
 
+
 const Login = () => {
 	const [userData, setUserData] = useContext(UserContext);
-	const navigate = useNavigate(); // Fixed: useNavigate instead of useNaviage
+	const navigate = useNavigate(); 
 	const [form, setForm] = useState({});
 
 	const handleChange = (e) => {
@@ -27,7 +29,7 @@ const Login = () => {
 				user: loginRes.data.user,
 			});
 			localStorage.setItem("auth-token", loginRes.data.token);
-			navigate("/"); // Navigate correctly
+			navigate("/"); 
 		} catch (err) {
 			console.log("problem", err.response.data.msg);
 			alert(err.response.data.msg);
@@ -35,22 +37,34 @@ const Login = () => {
 	};
 
 	useEffect(() => {
-		if (userData.user) navigate("/"); // Navigate correctly
+		if (userData.user) navigate("/"); 
 	}, [userData.user, navigate]);
 
 	return (
-		<div>
-			<h1>Login</h1>
-			<form onSubmit={handleSubmit}>
-				<label>Email:</label>
-				<input type="text" name="email" onChange={handleChange} />
+		<div className="card">
+			<>
+				<h1>Login to your account</h1>
+				<p>
+					Don't have an account?{" "}
+					<Link className="link" data-panel=".panel-signup" to="/signup">
+						Create a new account
+					</Link>
+				</p>
+				<form onSubmit={handleSubmit}>
+					<label>Email:</label>
+					<input type="text" name="email" onChange={handleChange} />
+					<br /> <br />
+					<label>Password</label>
+					<input type="password" name="password" onChange={handleChange} />
+					<br />
+					<br />
+					<button>Submit</button>
+				</form>
 				<br />
-				<label>Password</label>
-				<input type="password" name="password" onChange={handleChange} />
-				<br />
-				<button>Submit</button>
-			</form>
-			<Link to="/signup">Create a new account</Link>
+				<Link className="link" to="/signup">
+					<p>Forgot password?</p>
+				</Link>
+			</>
 		</div>
 	);
 };

@@ -1,0 +1,47 @@
+/* You can adjust the height value to your needs */
+.card-custom {
+    width: 600px;
+  height: 700px; /* For example, set the height to 400 pixels */
+  padding-top: 20px;
+  margin-top: 110px;
+  margin-left: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* Add more styling properties as needed */
+}
+.login_title{
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+.card-custom {
+  height: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.input-box {
+  margin-bottom: 15px;
+}
+.link {
+    color: rgb(230, 80, 26);
+    text-decoration: none;
+}
+.link p {
+    margin-left: 200px;
+}
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.login_des{
+    display: flex;
+}
