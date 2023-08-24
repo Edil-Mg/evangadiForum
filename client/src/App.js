@@ -8,6 +8,7 @@ import Login from './pages/login/Login'
 import SignUp from './pages/signUp/SignUp'
 import NavBar from "./pages/navbar/NavBar";
 
+
 function App() {
 	const [userData, setUserData] = useContext(UserContext);
 
@@ -42,7 +43,8 @@ function App() {
 	}, []);
 
 	return (
-		<div className="app">
+		<div className="App">
+			
 			<Router>
 				<Routes>
 					<Route
@@ -68,7 +70,7 @@ function App() {
 						path="/"
 						element={
 							<>
-								<NavBar /> <Home logout={logout} />{" "}
+								<NavBar /> <Home logout={logout} /> 
 							</>
 						}
 					/>

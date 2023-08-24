@@ -45,7 +45,7 @@ const SignUp = () => {
 	};
 	return (
 		<div className="card">
-			<h1>SignUp</h1>
+			<h3>SignUp</h3>
 			<br />
 			<form onSubmit={handleSubmit}>
 				<lable>First Name: </lable>

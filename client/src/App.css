@@ -1,6 +1,8 @@
-.app {
+.App {
   text-align: center;
-  /* background-color: rgb(232, 238, 236); */
+  /* background-color: rgb(236, 225, 231); */
+  /* background-image: url("https://images.unsplash.com/photo-1655998233171-ee5b130acba5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1899&q=80"); */
+  max-height:700px;
 }
 
 

@@ -1,31 +1,27 @@
-import React, { useState } from "react";
-import SignUp from "../signUp/SignUp";
-import Login from "../login/Login";
-import NavBar from "../navbar/NavBar";
+import React from 'react'
+import "./authCard.css"
 
 const AuthCard = () => {
-	const [activeCard, setActiveCard] = useState("signup"); // 'signup' or 'login'
-
-	const toggleCard = () => {
-		setActiveCard(activeCard === "signup" ? "login" : "signup");
-	};
-
-	return (
-		<>
-			<NavBar />
-			<div className="auth-card-container">
-				<div className={`auth-card ${activeCard === "signup" ? "active" : ""}`}>
-					<SignUp />
-				</div>
-				<div className={`auth-card ${activeCard === "login" ? "active" : ""}`}>
-					<Login />
-				</div>
-				<button onClick={toggleCard}>
-					Switch to {activeCard === "signup" ? "Login" : "SignUp"}
-				</button>
+  return (
+		<div className="auth_container">
+			<div className='description'>
+				<p>About</p>
+				<h1>Evangadi Networks</h1>
+				<p>
+					No matter what stage of life you are in, whether you’re just starting
+					elementary school or being promoted to CEO of a Fortune 500 company,
+					you have much to offer to those who are trying to follow in your
+					footsteps.
+				</p>
+				<p>
+					Wheather you are willing to share your knowledge or you are just
+					looking to meet mentors of your own, please start by joining the
+					network here.
+				</p>
+				<button>HOW IT WORKS</button>
 			</div>
-		</>
+		</div>
 	);
-};
+}
 
-export default AuthCard;
+export default AuthCard
