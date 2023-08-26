@@ -44,40 +44,42 @@ function App() {
 
 	return (
 		<div className="App">
-			
-			<Router>
-				<Routes>
-					<Route
-						path="/signup"
-						element={
-							<>
-								<NavBar />
-								<SignUp />
-							</>
-						}
-					/>
-					<Route
-						path="/login"
-						element={
-							<>
-								<NavBar />
-								<Login />
-							</>
-						}
-					/>
+				<Router>
+					<Routes>
+						<Route
+							path="/signup"
+							element={
+								<>
+									<NavBar />
+									<SignUp />
+								</>
+							}
+						/>
+						<Route
+							path="/login"
+							element={
+								<>
+									<NavBar />
+									<Login />
+								</>
+							}
+						/>
 
-					<Route
-						path="/"
-						element={
-							<>
-								<NavBar /> <Home logout={logout} /> 
-							</>
-						}
-					/>
-				</Routes>
-			</Router>
+						<Route
+							path="/"
+							element={
+								<>
+									<NavBar /> <Home logout={logout} />
+								</>
+							}
+						/>
+					</Routes>
+				</Router>
 		</div>
 	);
 }
 
 export default App;
+
+
+// <div style="background-image: url(&quot;/asset/bg-svg-f-d64add7e.svg&quot;); background-size:cover; background-repeat: no-repeat; padding-top: 13px; padding-bottom: 170px;"></div>

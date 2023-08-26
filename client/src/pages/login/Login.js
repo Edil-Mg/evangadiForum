@@ -43,19 +43,24 @@ const Login = () => {
 	return (
 		<div className="card">
 			<>
-				<h3>Login to your account</h3><br/>
+				<h3>Login to your account</h3>
+				<br />
 				<p>
 					Don't have an account?{" "}
 					<Link className="link" data-panel=".panel-signup" to="/signup">
 						Create a new account
 					</Link>
 				</p>
-				<form onSubmit={handleSubmit}>
-					<label>Email</label>
-					<input type="text" name="email" onChange={handleChange} />
+				<form onSubmit={handleSubmit} className="form-container">
+					<label></label>
+					<input type="text" placeholder="Email" onChange={handleChange} />
 					<br /> <br />
-					<label>Password</label>
-					<input type="password" name="password" onChange={handleChange} />
+					<label></label>
+					<input
+						type="password"
+						placeholder="Password"
+						onChange={handleChange}
+					/>
 					<br />
 					<br />
 					<button>Submit</button>

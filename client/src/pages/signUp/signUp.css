@@ -11,3 +11,36 @@
       color: rgb(230, 80, 26);
     text-decoration: none;
 }
+.form-container2 {
+	max-width: 400px; /* Set the maximum width of the form */
+	margin: 0 auto; /* Center the form horizontally */
+}
+
+.form-container2 label {
+	display: block; /* Display the label on a new line */
+	margin-bottom: 6px; /* Add some space below each label */
+}
+
+.form-container2 input[type="text"],
+.form-container2 input[type="password"]
+.form-container2 input[type="email"] {
+	width: 300px; /* Make the input fields span the full width of the container */
+	padding: 8px; /* Add padding for better appearance */
+	margin-bottom: 10px; /* Add some space below each input field */
+	border: 1px solid #ccc; /* Add a border for visual separation */
+	border-radius: 4px; /* Add rounded corners */
+}
+
+.form-container2 button {
+	padding: 10px 20px; /* Add padding to the button */
+	background-color: #516CF0; /* Set a background color */
+	color: white; /* Set text color to white */
+	border: none; /* Remove border */
+	border-radius: 4px; /* Add rounded corners */
+	cursor: pointer; /* Change cursor on hover */
+  width: 300px;
+}
+
+.form-container2 button:hover {
+	background-color: #FE8402; /* Darker color on hover */
+}

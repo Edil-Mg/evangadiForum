@@ -47,31 +47,33 @@ const SignUp = () => {
 		<div className="card">
 			<h3>SignUp</h3>
 			<br />
-			<form onSubmit={handleSubmit}>
-				<lable>First Name: </lable>
-				<input type="text" name="firstName" onChange={handleChange} />
+			<form onSubmit={handleSubmit} className="form-container2">
+				<lable></lable>
+				<input type="text" placeholder="First Name" onChange={handleChange} />
 				<br />
 				<br />
-				<label>Last Name:</label>
-				<input type="text" name="lastName" onChange={handleChange} />
+				<label></label>
+				<input type="text" placeholder="Last Name:" onChange={handleChange} />
 				<br />
 				<br />
-				<label>User Name: </label>
-				<input type="text" name="userName" onChange={handleChange} />
+				<label></label>
+				<input type="text" placeholder="userName" onChange={handleChange} />
 				<br />
 				<br />
-				<label>Email: </label>
-				<input type="email" name="email" onChange={handleChange} />
+				<label> </label>
+				<input type="text" placeholder="Email" onChange={handleChange} className="email"/>
 				<br />
 				<br />
-				<label>Password: </label>
-				<input type="password" name="password" onChange={handleChange} />
+				<label></label>
+				<input type="text" placeholder="Password" onChange={handleChange} />
 				<br />
 				<br />
 				<button>submit</button>
 			</form>
 			<br />
-			<Link className="link" to="/login">Already have an account?</Link>
+			<Link className="link" to="/login">
+				Already have an account?
+			</Link>
 			<br />
 		</div>
 	);
